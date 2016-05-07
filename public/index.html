@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Frankenbook</title>
+<style type="text/css">
+    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+</style>
+<link rel="shortcut icon" href="">
+<script src='jquery-2.2.1.min.js'> </script>
+<script src="script.js"></script>
+<script>
+var bookToLoad;
+
+var fileUploaded = function()
+{
+   var file = $('#theFileUploader').get(0);
+   var fileObj = $('#theFileUploader').get(0).files[0]
+   var filename = fileObj.name;
+   var ext = filename.split(".");
+   ext = ext[ext.length-1];
+   //console.log(ext);
+
+   var fd = new FormData();
+   //var fileInput = "s3Upload_" + new Date().getTime().toString() + "." + ext;
+   var fileInput =  filename;
+   bookToLoad = filename;
+   
+   bookName = filename.split(".");
+   bookName = bookName[0];
+   //console.log(bookName);
+   sessionStorage.setItem('bookName', bookName);
+   
+   fd.append('fileInput', fileInput);
+   fd.append('input', file.files[0]);
+   fd.append('date', (new Date()).toString());
+
+    //fd.append('data', data);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(e) {  
+      if (xhr.readyState != 4) { return; }
+      // callback logic
+      //alert("done");
+      $('#readButton').prop('disabled', false);
+    };
+    xhr.open("POST", "/uploadFile", true);
+    xhr.send(fd);
+}
+
+var readBook = function () {
+    //?user=" + tempUser
+    var url = "./loadBook?book=" + bookToLoad;
+    loadURL(url, function(data){
+        //console.log(data);
+    });
+    window.open('single.html', "_self");
+}
+
+function resetPage() {
+    $('#theFileUploader').wrap('<form>').closest('form').get(0).reset();
+    $('#theFileUploader').unwrap();
+    
+    $('#readButton').prop('disabled', true);
+}
+
+</script>
+</head>
+
+<body onload="resetPage()">
+  <div class="container-fluid text-center">
+    <br>
+    <form>
+    <input type='file' id='theFileUploader' class="form-control" onchange="fileUploaded()">
+    </form>
+    <button id="readButton" type="button" onclick="readBook()" class="btn btn-default">Read Book</button>
+  </div>
+</body>
+</html>

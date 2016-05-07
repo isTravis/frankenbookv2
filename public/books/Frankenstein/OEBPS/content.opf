@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="id">
+  <metadata>
+    <dc:rights>Public domain in the USA.</dc:rights>
+    <dc:identifier opf:scheme="URI" id="id">http://www.gutenberg.org/ebooks/84</dc:identifier>
+    <dc:creator opf:file-as="Shelley, Mary Wollstonecraft">Mary Wollstonecraft Shelley</dc:creator>
+    <dc:title>Frankenstein; Or, The Modern Prometheus</dc:title>
+    <dc:language xsi:type="dcterms:RFC4646">en</dc:language>
+    <dc:subject>Science fiction</dc:subject>
+    <dc:subject>Horror tales</dc:subject>
+    <dc:subject>Gothic fiction (Literary genre)</dc:subject>
+    <dc:subject>Scientists -- Fiction</dc:subject>
+    <dc:subject>Monsters -- Fiction</dc:subject>
+    <dc:subject>Frankenstein, Victor (Fictitious character) -- Fiction</dc:subject>
+    <dc:subject>Frankenstein's monster (Fictitious character) -- Fiction</dc:subject>
+    <dc:date opf:event="publication">1993-10-01</dc:date>
+    <dc:date opf:event="conversion">2016-05-01T05:14:20.934330+00:00</dc:date>
+    <dc:source>http://www.gutenberg.org/files/84/84-h/84-h.htm</dc:source>
+  </metadata>
+  <manifest>
+    <item media-type="text/css" href="pgepub.css" id="item1"/>
+    <item media-type="text/css" href="0.css" id="item2"/>
+    <item media-type="text/css" href="1.css" id="item3"/>
+    <!--Chunk: size=82521 Split on p-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-0.htm.html" id="item4"/>
+    <!--Chunk: size=81950 Split on p-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-1.htm.html" id="item5"/>
+    <!--Chunk: size=82286 Split on p-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-2.htm.html" id="item6"/>
+    <!--Chunk: size=82022 Split on p-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-3.htm.html" id="item7"/>
+    <!--Chunk: size=82020 Split on p-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-4.htm.html" id="item8"/>
+    <!--Chunk: size=54996 Split on div-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-5.htm.html" id="item9"/>
+    <!--Chunk: size=21989-->
+    <item media-type="application/xhtml+xml" href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-6.htm.html" id="item10"/>
+    <item media-type="application/x-dtbncx+xml" href="toc.ncx" id="ncx"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="item4" linear="yes"/>
+    <itemref idref="item5" linear="yes"/>
+    <itemref idref="item6" linear="yes"/>
+    <itemref idref="item7" linear="yes"/>
+    <itemref idref="item8" linear="yes"/>
+    <itemref idref="item9" linear="yes"/>
+    <itemref idref="item10" linear="yes"/>
+  </spine>
+  <guide>
+    <reference href="@public@vhost@g@gutenberg@html@files@84@84-h@84-h-0.htm.html#pgepubid00004" type="toc" title="CONTENTS"/>
+  </guide>
+</package>
